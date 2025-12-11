@@ -7087,7 +7087,7 @@ test3=test4</metainfo>
 				<string>БРОНЯ</string>
 			</resource>
 			<resource id="Header_Health">
-				<string>ЖИТТЯ</string>
+				<string>ЗДОРОВ'Я</string>
 			</resource>
 			<resource id="Header_Information">
 				<string>ІНФОРМАЦІЯ</string>
