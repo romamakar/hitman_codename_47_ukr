@@ -1,0 +1,93 @@
+name: Build and Release Zip
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Copy resources.xml into language-Ukrainian.zip
+        shell: pwsh
+        run: |
+          $zipPath = "release-sources/Setup/Locale/language-Ukrainian.zip"
+          $tempFolder = "temp-zip"
+
+          # Створити тимчасову папку
+          Remove-Item $tempFolder -Recurse -Force -ErrorAction Ignore
+          New-Item -ItemType Directory -Path $tempFolder | Out-Null
+
+          # Розпакувати існуючий ZIP
+          Expand-Archive -Path $zipPath -DestinationPath $tempFolder -Force
+
+          # Скопіювати resources.xml всередину розпакованої структури
+          Copy-Item "xml/resources.xml" "$tempFolder/resources.xml" -Force
+
+          # Перезапакувати назад у ZIP
+          Remove-Item $zipPath -Force
+          Compress-Archive -Path $tempFolder/* -DestinationPath $zipPath
+
+          # Прибрати тимчасову папку
+          Remove-Item $tempFolder -Recurse -Force
+
+      - name: Copy resources.xml into locale.zip
+        shell: pwsh
+        run: |
+          $zipPath = "release-sources/Setup/locale.zip"
+          $tempFolder = "temp2-zip"
+
+          # Створити тимчасову папку
+          Remove-Item $tempFolder -Recurse -Force -ErrorAction Ignore
+          New-Item -ItemType Directory -Path $tempFolder | Out-Null
+
+          # Розпакувати існуючий ZIP
+          Expand-Archive -Path $zipPath -DestinationPath $tempFolder -Force
+
+          # Скопіювати resources.xml всередину розпакованої структури
+          Copy-Item "xml/resources.xml" "$tempFolder/resources.xml" -Force
+
+          # Перезапакувати назад у ZIP
+          Remove-Item $zipPath -Force
+          Compress-Archive -Path $tempFolder/* -DestinationPath $zipPath
+
+          # Прибрати тимчасову папку
+          Remove-Item $tempFolder -Recurse -Force
+      - name: Install Inno Setup
+        run: choco install innosetup -y      
+
+      - name: Build installer (silent)
+        run: ISCC.exe "${{ github.workspace }}\installer\setup.iss"
+
+      - name: Zip release-sources folder
+        shell: pwsh
+        run: |
+          $source = "release-sources"
+          $zipFile = "hitman47_ukr.zip"
+          Compress-Archive -Path $source -DestinationPath $zipFile -Force
+
+      - name: Upload installer
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "D:\\a\\hitman_codename_47_ukr\\hitman_codename_47_ukr\\installer\\Output\\Hitman_Codename_47_Ukr_Installer.exe"
+          tag_name: "exe"  # Можна використовувати будь-який тег, якщо потрібно
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "hitman47_ukr.zip"
+          tag_name: "zip"  # Можна використовувати будь-який тег, якщо потрібно
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
