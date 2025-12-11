@@ -3529,13 +3529,13 @@ EIDOS USA
 				<string>Міжнародна контрактна агенція</string>
 			</resource>
 			<resource id="Kills">
-				<string>Непотрібні вбивства</string>
+				<string>Зайві жертви</string>
 			</resource>
 			<resource id="MoreInfo">
 				<string>Докладніше</string>
 			</resource>
 			<resource id="New">
-				<string>Знову</string>
+				<string>Новий</string>
 			</resource>
 			<resource id="No">
 				<string>Ні</string>
@@ -3635,10 +3635,10 @@ EIDOS USA
 					<string>Бігти назад</string>
 				</resource>
 				<resource id="RunLeft">
-					<string>Бігти вліво (стрейф)</string>
+					<string>Бігти вліво</string>
 				</resource>
 				<resource id="RunRight">
-					<string>Бігти вправо (стрейф)</string>
+					<string>Бігти вправо</string>
 				</resource>
 				<resource id="Select">
 					<string>Взяти предмет</string>
@@ -3680,10 +3680,10 @@ EIDOS USA
 					<string>Іти вперед</string>
 				</resource>
 				<resource id="WalkLeft">
-					<string>Іти вліво (стрейф)</string>
+					<string>Йти вліво</string>
 				</resource>
 				<resource id="WalkRight">
-					<string>Іти вправо (стрейф)</string>
+					<string>Йти вправо</string>
 				</resource>
 			</folder>
 			<resource id="ApplySettings">
@@ -3724,10 +3724,10 @@ EIDOS USA
 					<string>Драйвер дисплею</string>
 				</resource>
 				<resource id="DisplayMode">
-					<string>Розрізнення</string>
+					<string>Розширення</string>
 				</resource>
 				<resource id="Full">
-					<string>Високо</string>
+					<string>Повна</string>
 				</resource>
 				<resource id="FullScreen">
 					<string>Повний екран</string>
@@ -3736,19 +3736,19 @@ EIDOS USA
 					<string>Хітман</string>
 				</resource>
 				<resource id="High">
-					<string>Високо</string>
+					<string>Висока</string>
 				</resource>
 				<resource id="LevelOfDetail">
 					<string>Детальність моделей</string>
 				</resource>
 				<resource id="Low">
-					<string>Низько</string>
+					<string>Низька</string>
 				</resource>
 				<resource id="Medium">
-					<string>Середньо</string>
+					<string>Середня</string>
 				</resource>
 				<resource id="Normal">
-					<string>Високо</string>
+					<string>Нормальна</string>
 				</resource>
 				<resource id="Off">
 					<string>Немає</string>
@@ -3769,7 +3769,7 @@ EIDOS USA
 					<string>Вершинне освітлення</string>
 				</resource>
 				<resource id="VeryLow">
-					<string>Найнижче</string>
+					<string>Дуже низька</string>
 				</resource>
 			</folder>
 			<resource id="ExitToMain">
