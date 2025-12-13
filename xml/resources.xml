@@ -2700,7 +2700,7 @@
 				</resource>
 			</folder>
 			<folder id="Objectives"><resource id="Idol Secured">
-					<string>Убезпечте ідола</string>
+					<string>Знайдіть ідола</string>
 				</resource>
 			</folder>
 		</folder>
@@ -5971,7 +5971,7 @@ test3=test4</metainfo>
 				<string>Отримано отруту</string>
 			</resource>
 			<resource id="ShowIdolToIndians">
-				<string>Показати ідола індіанцям</string>
+				<string>Покажи ідола індіанцям</string>
 			</resource>
 			<resource id="SuspectBehaviour">
 				<string>Охоронців повідомив цивільний про підозрілу поведінку</string>
