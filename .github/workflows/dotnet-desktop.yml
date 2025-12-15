@@ -72,7 +72,7 @@ jobs:
       - name: Zip release-sources folder
         shell: pwsh
         run: |
-          $source = "release-sources"
+          $source = "release-sources\*"
           $zipFile = "hitman47_ukr.zip"
           Compress-Archive -Path $source -DestinationPath $zipFile -Force
 
