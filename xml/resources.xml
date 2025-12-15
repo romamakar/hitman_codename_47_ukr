@@ -6221,7 +6221,7 @@ test3=test4</metainfo>
 					<string>Israeli Military Industries UZI</string>
 				</resource>
 				<resource id="SuitCaseBombXray">
-					<string>Кейс з бомбою</string>
+					<string>Кейс для бомби</string>
 				</resource>
 				<resource id="SuitcaseMoney">
 					<string>Кейс з грошима</string>
@@ -6498,7 +6498,7 @@ test3=test4</metainfo>
 					<string>UZI</string>
 				</resource>
 				<resource id="SuitCaseBombXray">
-					<string>Кейс з бомбою</string>
+					<string>Кейс для бомби</string>
 				</resource>
 				<resource id="SuitcaseMoney">
 					<string>Кейс</string>
