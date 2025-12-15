@@ -2308,7 +2308,7 @@
 				</folder>
 			</folder>
 			<folder id="Receptionist"><folder id="1"><resource id="1H">
-						<string>Я зробив замовлення на два дні.</string>
+						<string>Я зробив бронювання на два дні.</string>
 						<file/>
 						<metainfo>1</metainfo>
 					</resource>
@@ -2544,7 +2544,7 @@
 6' висоти
 220 фунтів
 
-Високо навчених терорист.
+Добре навчений терорист.
 Жорстокий і нещадний.</string>
 			</resource>
 		</folder>
@@ -4013,7 +4013,7 @@ test3=test4</metainfo>
 						<metainfo>2</metainfo>
 					</resource>
 					<resource id="2H">
-						<string>Добре - я повернуся пізніше розмістити замовлення.</string>
+						<string>Добре - я повернуся пізніше щоб зробити замовлення.</string>
 						<file/>
 						<metainfo>1</metainfo>
 					</resource>
